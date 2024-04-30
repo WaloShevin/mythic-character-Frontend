@@ -15,7 +15,7 @@ jobs:
           node-version: 21.7.3
 
       - name: Install dependencies
-        run: npm install ci
+        run: npm install --legacy-peer-deps
 
       - name: Run tests
         run: npm run test:unit
