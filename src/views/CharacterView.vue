@@ -13,7 +13,7 @@
         </div>
         <div class="info">
           <div class="icon strength-icon"></div>
-          <p>Strength: {{ character.strength }}</p>
+          <p>Strength: {{ character.power }}</p>
         </div>
       </div>
       <div class="card-footer">
@@ -41,11 +41,7 @@ export default {
   name: 'CharacterView',
   data () {
     return {
-      characters: [
-        { id: 1, name: 'Character 1', race: 'Human', age: 30, strength: 10, story: '' },
-        { id: 2, name: 'Character 2', race: 'Elf', age: 200, strength: 8, story: '' },
-        { id: 3, name: 'Character 3', race: 'Dwarf', age: 50, strength: 12, story: '' }
-      ],
+      characters: [],
       selectedCharacter: null,
       selectedCharacterStory: '',
       showSaveDeleteButtons: false
@@ -86,14 +82,28 @@ export default {
     characterColor (race) {
       switch (race) {
         case 'Human':
-          return '#ffb6c1' // Pink für Menschen
+          return '#ffb6c1' // Pink for Humans
         case 'Elf':
-          return '#87ceeb' // Sky Blue für Elfen
+          return '#87ceeb' // Sky Blue for Elves
         case 'Dwarf':
-          return '#ffd700' // Gold für Zwerge
+          return '#ffd700' // Gold for Dwarves
         default:
-          return '#f0f0f0' // Standardfarbe
+          return '#f0f0f0' // Default color
       }
+    }
+  },
+  async mounted () {
+    try {
+      const response = await fetch('https://mythic-character-generator.onrender.com/characters') // Adjust the URL to your backend
+      if (!response.ok) {
+        throw new Error('Failed to fetch characters')
+      }
+      const data = await response.json()
+      console.log(data)
+      this.characters = data
+    } catch (error) {
+      console.error('Error fetching characters:', error)
+      this.characters = [] // Return an empty array in case of error
     }
   }
 }
@@ -106,8 +116,6 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-}
-.character-view {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -214,5 +222,4 @@ export default {
   padding: 10px 20px;
   cursor: pointer;
 }
-
 </style>

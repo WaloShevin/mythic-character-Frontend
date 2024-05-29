@@ -17,29 +17,8 @@
 
 <script>
 export default {
-  name: 'App',
-  created () {
-    this.$fetchCharacters()
-  },
-
-  methods: {
-    async $fetchCharacters () {
-      const BASE_URL = 'http://localhost:8080/api'
-      try {
-        const response = await fetch(`${BASE_URL}/characters`)
-        if (!response.ok) {
-          throw new Error('Failed to fetch characters')
-        }
-        // eslint-disable-next-line no-unused-vars
-        const characters = await response.json()
-        // Do something with characters, like storing them in a Vuex store
-      } catch (error) {
-        console.error('Error fetching characters:', error)
-      }
-    }
-  }
+  name: 'App'
 }
-
 </script>
 
 <style>
