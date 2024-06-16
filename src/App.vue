@@ -9,9 +9,6 @@
 
     <router-view/>
 
-    <footer>
-      <p>&copy; 2024 FantasyWorld</p>
-    </footer>
   </div>
 </template>
 
@@ -24,8 +21,6 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
@@ -39,13 +34,5 @@ nav a {
   font-weight: bold;
   color: #2c3e50;
   margin: 0 10px;
-}
-
-footer {
-  margin-top: 20px;
-}
-
-body {
-  background: radial-gradient(circle, #663399, #00CED1); /* Farbe */
 }
 </style>
