@@ -38,6 +38,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.0.0",
-    "jest": "^27.0.5"
+    "jest": "^27.0.5",
+    "vue-loader": "^17.4.2",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   }
 }

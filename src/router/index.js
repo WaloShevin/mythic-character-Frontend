@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CharacterView from '../views/CharacterView.vue'
 import CreateCharacter from '../views/CreateCharacter.vue'
-import MyCharacters from '../views/MyCharacters.vue'
 const routes = [
   {
     path: '/',
@@ -19,11 +18,6 @@ const routes = [
     path: '/view',
     name: 'view',
     component: CharacterView // Verwende die CharacterView-Komponente
-  },
-  {
-    path: '/characters',
-    name: 'characters',
-    component: MyCharacters // Neu hinzugefügt
   }
 ]
 

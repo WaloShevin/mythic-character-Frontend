@@ -4,7 +4,6 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/create">Create Character</router-link> |
       <router-link to="/view">View Characters</router-link> |
-      <router-link to="/characters">My Characters</router-link>
     </nav>
 
     <router-view/>
