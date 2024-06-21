@@ -26,6 +26,10 @@
         <label for="weakness">Weakness:</label>
         <input type="text" id="weakness" v-model="character.weakness" class="form-control">
       </div>
+      <div class="form-group">
+        <label for="story">Story:</label>
+        <textarea id="story" v-model="character.story" class="form-control"></textarea>
+      </div>
       <button type="submit" class="btn btn-primary">Create Character</button>
     </form>
   </div>
