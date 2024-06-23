@@ -14,18 +14,12 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.welcome-text {
+  margin-bottom: 40px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
+
+.welcome-text h1 {
+  font-size: 3em;
   color: #42b983;
 }
 </style>
