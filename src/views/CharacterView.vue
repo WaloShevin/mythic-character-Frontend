@@ -426,7 +426,7 @@ export default {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #888888;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
